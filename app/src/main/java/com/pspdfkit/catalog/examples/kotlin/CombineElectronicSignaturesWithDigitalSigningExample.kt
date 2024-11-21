@@ -24,6 +24,7 @@ import com.pspdfkit.forms.SignatureFormElement
 import com.pspdfkit.signatures.DigitalSignatureMetadata
 import com.pspdfkit.signatures.Signature
 import com.pspdfkit.signatures.SignatureAppearance
+import com.pspdfkit.signatures.SignatureGraphic
 import com.pspdfkit.signatures.SignerOptions
 import com.pspdfkit.signatures.SigningManager
 import com.pspdfkit.signatures.getPrivateKeyEntryFromP12Stream
@@ -199,10 +200,10 @@ class CombineElectronicSignaturesWithDigitalSigningActivity :
     private fun signDocumentWithSignatureBitmap(formElement: SignatureFormElement, signatureBitmap: Bitmap) {
         val outputFile = File(filesDir, "signedDocument.pdf")
 
-        val signatureAppearance = SignatureAppearance.Builder()
-            .setShowWatermark(false)
-            .setSignatureGraphic(SignatureAppearance.SignatureGraphic.fromBitmap(getImageUri(signatureBitmap)))
-            .build()
+        val signatureAppearance = SignatureAppearance(
+            showWatermark = false,
+            signatureGraphic = SignatureGraphic.fromBitmap(getImageUri(signatureBitmap))
+        )
 
         val key = getPrivateKeyEntry(this)
         val signedDocumentUri = Uri.fromFile(outputFile)
