@@ -19,11 +19,11 @@ android {
 
     defaultConfig {
         applicationId = namespace
-        minSdk = 21
+        minSdk = 26
         targetSdk = compileSdk
 
-        versionName = "2024.8.0"
-        versionCode = 141139
+        versionName = "2024.9.0"
+        versionCode = 141397
 
         vectorDrawables {
             useSupportLibrary = true
@@ -69,11 +69,11 @@ dependencies {
 
     // Nutrient is integrated from the Nutrient Maven repository. See the `repositories` block at the beginning
     // of this file, which shows how to set up the repository in your app.
-    implementation("com.pspdfkit:pspdfkit:2024.8.0")
+    implementation("com.pspdfkit:pspdfkit:2024.9.0")
 
     // OCR library + English language pack.
-    implementation("com.pspdfkit:pspdfkit-ocr:2024.8.0")
-    implementation("com.pspdfkit:pspdfkit-ocr-english:2024.8.0")
+    implementation("com.pspdfkit:pspdfkit-ocr:2024.9.0")
+    implementation("com.pspdfkit:pspdfkit-ocr-english:2024.9.0")
 
 
     // Androidx

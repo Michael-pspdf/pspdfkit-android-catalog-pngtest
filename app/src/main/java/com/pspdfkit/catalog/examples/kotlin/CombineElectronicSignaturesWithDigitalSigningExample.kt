@@ -13,8 +13,6 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
-import com.pspdfkit.annotations.Annotation
-import com.pspdfkit.annotations.AnnotationType
 import com.pspdfkit.catalog.R
 import com.pspdfkit.catalog.SdkExample
 import com.pspdfkit.catalog.tasks.ExtractAssetTask.extract
@@ -43,7 +41,7 @@ import java.security.KeyStore
  * Showcases how to combine a created signature annotation using the [ElectronicSignatureFragment] with digitally signing
  * the document using a certificate.
  *
- * See guide: https://pspdfkit.com/guides/android/signatures/using-electronic-signatures-and-digital-signatures-together/
+ * See guide: https://nutrient.io/guides/android/signatures/using-electronic-signatures-and-digital-signatures-together/
  */
 class CombineElectronicSignaturesWithDigitalSigningExample(context: Context) :
     SdkExample(
@@ -106,16 +104,16 @@ class CombineElectronicSignaturesWithDigitalSigningActivity :
         super.onStart()
 
         // We need to keep track of the form field name so we can retrieve it when digitally signing after the signature has been created
-        // in the Electronic Signature Dialog. The dialog is opened by PSPDFKit automatically when the signature form element is clicked.
+        // in the Electronic Signature Dialog. The dialog is opened by Nutrient automatically when the signature form element is clicked.
         // This behaviour can also be overridden here if required.
         requirePdfFragment().addOnFormElementClickedListener { formElement ->
             when (formElement.type) {
                 FormType.SIGNATURE -> {
                     onSignatureFormElementClicked(formElement as SignatureFormElement)
-                    // By returning true, you intercept the event and prevent PSPDFKit from showing the signature picker itself.
+                    // By returning true, you intercept the event and prevent Nutrient from showing the signature picker itself.
                     true
                 }
-                // This click event is not interesting for us. Return false to let PSPDFKit handle this event.
+                // This click event is not interesting for us. Return false to let Nutrient handle this event.
                 else -> false
             }
         }
@@ -167,11 +165,7 @@ class CombineElectronicSignaturesWithDigitalSigningActivity :
                 val formFieldAnnotation = clickedSignatureFormElement.annotation
 
                 // The signature object provides convenient conversion to ink or stamp annotation.
-                val signatureAnnotation: Annotation = when (signature.annotationType) {
-                    AnnotationType.INK -> signature.toInkAnnotation(document, formFieldAnnotation.pageIndex, formFieldAnnotation.boundingBox)
-                    AnnotationType.STAMP -> signature.toStampAnnotation(document, formFieldAnnotation.pageIndex, formFieldAnnotation.boundingBox)
-                    else -> throw IllegalStateException("Unhandled Signature type. Neither Ink, nor Stamp.")
-                }
+                val signatureAnnotation = signature.toAnnotation(document, formFieldAnnotation.pageIndex, formFieldAnnotation.boundingBox)
 
                 // Add the annotation to the document. This step is required so we can render the signature
                 // in order to pass the render to the `SignatureAppearance` when digitally signing in the
