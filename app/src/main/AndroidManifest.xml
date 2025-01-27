@@ -41,7 +41,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher_foreground"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/PSPDFCatalog.Theme.Light"
@@ -589,6 +589,17 @@
         <activity
             android:name=".examples.kotlin.WebViewActivity"
             android:label="@string/remoteUrlDataProviderExampleTitle"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".examples.kotlin.ShowSignedDocumentActivity"
+            android:label="@string/digitalSignatureExampleTitle"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".examples.kotlin.SignDocumentWithPngSuiteGraphicsActivity"
+            android:label="@string/digitalSignatureExampleTitle"
+            android:theme="@style/Theme.AppCompat.Light"
             android:windowSoftInputMode="adjustNothing" />
 
     </application>

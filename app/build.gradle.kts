@@ -19,7 +19,7 @@ android {
 
     defaultConfig {
         applicationId = namespace
-        minSdk = 26
+        minSdk = 22
         targetSdk = compileSdk
 
         versionName = "2024.9.0"
@@ -86,9 +86,9 @@ dependencies {
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material:material")
+//    implementation("androidx.compose.material:material")
 // Activate this to switch the app to Material 3
-//    implementation("androidx.compose.material3:material3:1.2.1")
+    implementation("androidx.compose.material3:material3:1.2.1")
     implementation("androidx.compose.material:material-icons-extended")
     implementation("androidx.activity:activity-compose:1.9.0")
     implementation("androidx.compose.runtime:runtime-rxjava3:1.6.8")

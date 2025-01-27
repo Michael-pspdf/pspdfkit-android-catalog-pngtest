@@ -1,5 +1,5 @@
 /*
- *   Copyright © 2023-2024 PSPDFKit GmbH. All rights reserved.
+ *   Copyright © 2023-2025 PSPDFKit GmbH. All rights reserved.
  *
  *   The PSPDFKit Sample applications are licensed with a modified BSD license.
  *   Please see License for details. This notice may not be removed from this file.
@@ -118,190 +118,190 @@ import com.pspdfkit.catalog.examples.kotlin.customsearchuicompose.CustomSearchUi
 import com.pspdfkit.catalog.examples.kotlin.instant.InstantExample
 
 fun getSectionsWithExamples(context: Context) = listOf(
-    SdkExample.Section(
-        context.getString(R.string.example_section_basic),
-        R.drawable.ic_basic,
-        DefaultExample(context),
-        PlaygroundExample(context),
-        SimpleFragmentExample(context),
-        KioskExample(context),
-        InstantExample(context),
-        DocumentTabsExample(context),
-        EmptyActivityExample(context)
-    ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_industry),
-        R.drawable.ic_industry,
-        ELearningExample(context),
-        ConstructionExample(context)
-    ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_opening_documents),
-        R.drawable.ic_opening_documents,
-        ExternalDocumentExample(context),
-        CustomDataProviderExample(context),
-        DocumentDownloadExample(context),
-        ProgressProviderExample(context),
-        PasswordExample(context),
-        AesEncryptedFileExample(context),
-        ImageDocumentExample(context),
-        RemoteUrlExample(context)
-    ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_behaviour_customization),
-        R.drawable.ic_behaviour_customization,
-        ScientificPaperExample(context),
-        DarkThemeExample(context),
-        ZoomExample(context),
-        RuntimeConfigurationExample(context),
-        CustomFragmentRuntimeConfigurationExample(context),
-        UserInterfaceViewModesExample(context),
-        CustomApplicationPolicyExample(context),
-        CustomAnnotationNoteHinterProviderExample(context),
-        RotatePageExample(context),
-        OutlineProviderExample(context)
-    ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_annotations),
-        R.drawable.ic_annotations,
-        AnnotationCreationExample(context),
-        AnnotationWithAlphaCreationExample(context),
-        FileAnnotationCreationExample(context),
-        AnnotationRenderingExample(context),
-        AnnotationConfigurationExample(context),
-        AnnotationFlagsExample(context),
-        AnnotationSelectionCustomizationExample(context),
-        CustomAnnotationInspectorExample(context),
-        CustomStampAnnotationsExample(context),
-        AnnotationOverlayExample(context),
-        DocumentJsonExample(context),
-        InstantJsonAttachmentExample(context),
-        XfdfExample(context),
-        HideRevealAnnotationsCreationExample(context),
-        SoundAnnotationDataExtractionExample(context)
-    ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_forms),
-        R.drawable.ic_forms,
-        FormFillingExample(context),
-        FormCreationExample(context),
-        FormClickInterceptExample(context),
-        CustomFormHighlightColorExample(context)
-    ),
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_basic),
+//        R.drawable.ic_basic,
+//        DefaultExample(context),
+//        PlaygroundExample(context),
+//        SimpleFragmentExample(context),
+//        KioskExample(context),
+//        InstantExample(context),
+//        DocumentTabsExample(context),
+//        EmptyActivityExample(context)
+//    ),
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_industry),
+//        R.drawable.ic_industry,
+//        ELearningExample(context),
+//        ConstructionExample(context)
+//    ),
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_opening_documents),
+//        R.drawable.ic_opening_documents,
+//        ExternalDocumentExample(context),
+//        CustomDataProviderExample(context),
+//        DocumentDownloadExample(context),
+//        ProgressProviderExample(context),
+//        PasswordExample(context),
+//        AesEncryptedFileExample(context),
+//        ImageDocumentExample(context),
+//        RemoteUrlExample(context)
+//    ),
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_behaviour_customization),
+//        R.drawable.ic_behaviour_customization,
+//        ScientificPaperExample(context),
+//        DarkThemeExample(context),
+//        ZoomExample(context),
+//        RuntimeConfigurationExample(context),
+//        CustomFragmentRuntimeConfigurationExample(context),
+//        UserInterfaceViewModesExample(context),
+//        CustomApplicationPolicyExample(context),
+//        CustomAnnotationNoteHinterProviderExample(context),
+//        RotatePageExample(context),
+//        OutlineProviderExample(context)
+//    ),
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_annotations),
+//        R.drawable.ic_annotations,
+//        AnnotationCreationExample(context),
+//        AnnotationWithAlphaCreationExample(context),
+//        FileAnnotationCreationExample(context),
+//        AnnotationRenderingExample(context),
+//        AnnotationConfigurationExample(context),
+//        AnnotationFlagsExample(context),
+//        AnnotationSelectionCustomizationExample(context),
+//        CustomAnnotationInspectorExample(context),
+//        CustomStampAnnotationsExample(context),
+//        AnnotationOverlayExample(context),
+//        DocumentJsonExample(context),
+//        InstantJsonAttachmentExample(context),
+//        XfdfExample(context),
+//        HideRevealAnnotationsCreationExample(context),
+//        SoundAnnotationDataExtractionExample(context)
+//    ),
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_forms),
+//        R.drawable.ic_forms,
+//        FormFillingExample(context),
+//        FormCreationExample(context),
+//        FormClickInterceptExample(context),
+//        CustomFormHighlightColorExample(context)
+//    ),
 
     SdkExample.Section(
         context.getString(R.string.example_section_digital_signing),
         R.drawable.ic_digital_signatures,
         DigitalSignatureExample(context),
-        ManualSigningExample(context),
-        LongTermValidationExample(context),
-        LongTermValidationAfterSigningExample(context),
-        CombineElectronicSignaturesWithDigitalSigningExample(context)
+//        ManualSigningExample(context),
+//        LongTermValidationExample(context),
+//        LongTermValidationAfterSigningExample(context),
+//        CombineElectronicSignaturesWithDigitalSigningExample(context)
     ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_electronic_signatures),
-        R.drawable.ic_signing,
-        CombineElectronicSignaturesWithDigitalSigningExample(context),
-        CustomElectronicSignatureExample(context),
-        SignatureStorageDatabaseExample(context)
-    ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_components),
-        R.drawable.ic_components,
-        ReaderViewExample(context),
-        MeasurementToolsExample(context)
-    ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_javascript),
-        R.drawable.ic_javascript,
-        JavaScriptActionsExample(context),
-        JavaScriptFormFillingExample(context),
-        FormsJavaScriptExample(context),
-        JavaScriptCalculatorExample(context)
-    ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_document_processing),
-        R.drawable.ic_document_processing,
-        DocumentProcessingExample(context),
-        DocumentFromCanvasExample(context),
-        OcrExample(context),
-        GenerateReportExample(context),
-        MergeDocumentsExample(context),
-        DocumentComparisonExample(context),
-        ConvertHtmlToPdfExample(context),
-        CustomPageTemplatesExample(context),
-        PdfFromImageExample(context)
-    ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_layout_customization),
-        R.drawable.ic_layout_customization,
-        CustomLayoutExample(context),
-        FragmentExample(context),
-        ToolbarsInFragmentExample(context),
-        FormEditingInFragmentExample(context),
-        PdfUiFragmentExample(context),
-        CustomDocumentDownloadExample(context),
-        DocumentSwitcherExample(context),
-        VerticalScrollbarExample(context),
-        SplitDocumentExample(context),
-        PersistentAnnotationSidebarExample(context),
-        AnnotationSelectionViewStylingExample(context),
-        DocumentScrollExample(context)
-    ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_toolbar_customization),
-        R.drawable.ic_toolbar_customization,
-        CustomActionsExample(context),
-        CustomToolbarIconGroupingExample(context),
-        CustomAnnotationCreationToolbarExample(context),
-        CustomInlineSearchExample(context),
-        CustomSearchUiExample(context),
-        DisabledAnnotationPropertyExample(context),
-        TextHighlightPopupCustomisationExample(context)
-    ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_sharing),
-        R.drawable.ic_sharing,
-        DocumentSharingExample(context),
-        CustomSharingMenuExample(context),
-        CustomShareDialogExample(context)
-    ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_jc_examples),
-        R.drawable.ic_jetpack_compose,
-        ComposeExampleApp(context),
-        CustomSearchUiComposeExample(context),
-        JetpackComposeExample(context),
-        JetpackComposeImageExample(context),
-        NavHostExample(context)
-    ),
-
-    SdkExample.Section(
-        context.getString(R.string.example_section_misc_examples),
-        R.drawable.ic_misc_examples,
-        WatermarkExample(context),
-        BookmarkHighlightingExample(context),
-        OverlayViewsExample(context),
-        PersistentTabsExample(context),
-        FilterableThumbnailGridExample(context),
-        ScreenReaderExample(context),
-        IndexedFullTextSearchExample(context),
-        InlineMediaExample(context),
-        DynamicMultimediaAnnotationExample(context),
-        RandomDocumentReplacementExample(context),
-        ViewPager2Example(context)
-    )
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_electronic_signatures),
+//        R.drawable.ic_signing,
+//        CombineElectronicSignaturesWithDigitalSigningExample(context),
+//        CustomElectronicSignatureExample(context),
+//        SignatureStorageDatabaseExample(context)
+//    ),
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_components),
+//        R.drawable.ic_components,
+//        ReaderViewExample(context),
+//        MeasurementToolsExample(context)
+//    ),
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_javascript),
+//        R.drawable.ic_javascript,
+//        JavaScriptActionsExample(context),
+//        JavaScriptFormFillingExample(context),
+//        FormsJavaScriptExample(context),
+//        JavaScriptCalculatorExample(context)
+//    ),
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_document_processing),
+//        R.drawable.ic_document_processing,
+//        DocumentProcessingExample(context),
+//        DocumentFromCanvasExample(context),
+//        OcrExample(context),
+//        GenerateReportExample(context),
+//        MergeDocumentsExample(context),
+//        DocumentComparisonExample(context),
+//        ConvertHtmlToPdfExample(context),
+//        CustomPageTemplatesExample(context),
+//        PdfFromImageExample(context)
+//    ),
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_layout_customization),
+//        R.drawable.ic_layout_customization,
+//        CustomLayoutExample(context),
+//        FragmentExample(context),
+//        ToolbarsInFragmentExample(context),
+//        FormEditingInFragmentExample(context),
+//        PdfUiFragmentExample(context),
+//        CustomDocumentDownloadExample(context),
+//        DocumentSwitcherExample(context),
+//        VerticalScrollbarExample(context),
+//        SplitDocumentExample(context),
+//        PersistentAnnotationSidebarExample(context),
+//        AnnotationSelectionViewStylingExample(context),
+//        DocumentScrollExample(context)
+//    ),
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_toolbar_customization),
+//        R.drawable.ic_toolbar_customization,
+//        CustomActionsExample(context),
+//        CustomToolbarIconGroupingExample(context),
+//        CustomAnnotationCreationToolbarExample(context),
+//        CustomInlineSearchExample(context),
+//        CustomSearchUiExample(context),
+//        DisabledAnnotationPropertyExample(context),
+//        TextHighlightPopupCustomisationExample(context)
+//    ),
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_sharing),
+//        R.drawable.ic_sharing,
+//        DocumentSharingExample(context),
+//        CustomSharingMenuExample(context),
+//        CustomShareDialogExample(context)
+//    ),
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_jc_examples),
+//        R.drawable.ic_jetpack_compose,
+//        ComposeExampleApp(context),
+//        CustomSearchUiComposeExample(context),
+//        JetpackComposeExample(context),
+//        JetpackComposeImageExample(context),
+//        NavHostExample(context)
+//    ),
+//
+//    SdkExample.Section(
+//        context.getString(R.string.example_section_misc_examples),
+//        R.drawable.ic_misc_examples,
+//        WatermarkExample(context),
+//        BookmarkHighlightingExample(context),
+//        OverlayViewsExample(context),
+//        PersistentTabsExample(context),
+//        FilterableThumbnailGridExample(context),
+//        ScreenReaderExample(context),
+//        IndexedFullTextSearchExample(context),
+//        InlineMediaExample(context),
+//        DynamicMultimediaAnnotationExample(context),
+//        RandomDocumentReplacementExample(context),
+//        ViewPager2Example(context)
+//    )
 )
